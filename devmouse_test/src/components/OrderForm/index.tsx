@@ -6,7 +6,7 @@ import { addOrder } from '../../store/slices/ordersSlice';
 import { loadProducts, loadRestaurants, selectProduct, selectRestaurant } from '../../store/slices/restaurantsSlice';
 import Button from '../Button';
 
-function OrderForm() {
+const OrderForm: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   // redux states

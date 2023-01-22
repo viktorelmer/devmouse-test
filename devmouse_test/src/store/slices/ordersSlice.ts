@@ -20,10 +20,6 @@ export const ordersSlice = createSlice({
       const savedOrder = getFromLocalStorage<IOrder[]>(ORDER_STORAGE_KEY)
       if (savedOrder) state.data = savedOrder
     },
-    setOrders: (state, action: PayloadAction<IOrder[]>) => {
-      state.data = action.payload
-      updateLocalStorage(ORDER_STORAGE_KEY, state.data)
-    },
     editOrder: (state, action: PayloadAction<IOrder>) => {
       const indexOfOrderToEdit = state.data.findIndex(order => order.id === action.payload.id)
 
@@ -43,6 +39,6 @@ export const ordersSlice = createSlice({
   },
 })
 
-export const { editOrder, removeOrder, addOrder, setOrders, loadSavedOrder } = ordersSlice.actions
+export const { editOrder, removeOrder, addOrder, loadSavedOrder } = ordersSlice.actions
 
 export default ordersSlice.reducer

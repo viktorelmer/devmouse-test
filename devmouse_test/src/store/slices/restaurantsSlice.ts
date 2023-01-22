@@ -42,12 +42,6 @@ export const restaurantsSlice = createSlice({
   name: 'restaurants',
   initialState,
   reducers: {
-    setProducts: (state, action: PayloadAction<IProduct[]>) => {
-      state.products = action.payload
-    },
-    setRestaurants: (state, action: PayloadAction<IRestaurant[]>) => {
-      state.data = action.payload
-    },
     selectRestaurant: (state, action: PayloadAction<number>) => {
       state.selectedRestaurant = action.payload
     },
@@ -65,6 +59,6 @@ export const restaurantsSlice = createSlice({
   },
 })
 
-export const { setRestaurants, selectRestaurant, setProducts, selectProduct } = restaurantsSlice.actions
+export const { selectRestaurant, selectProduct } = restaurantsSlice.actions
 
 export default restaurantsSlice.reducer

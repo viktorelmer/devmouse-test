@@ -33,15 +33,6 @@ export interface ICachedData<T> {
   data: T
 }
 
-const TABEL_CONFIG = {
-  tabel_header: [
-    { label: "Restaurant", key: "restaurant" },
-    { label: "Product", key: "name" },
-    { label: "Cost", key: "price", style: "text-center" },
-    { label: "Actions", key: "actions", action: TABLE_ACTION_KEYS.REMOVE, style: "text-center" },
-  ],
-};
-
 export type TableActions = "remove"
 
 export interface ITableActions {
